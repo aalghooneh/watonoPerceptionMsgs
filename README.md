@@ -26,4 +26,4 @@ decode_radars/track
 decode_radars/tracklist
 ```
 
-
+### for the new bag, you just need to write a subscriber to /fusion/tracks
