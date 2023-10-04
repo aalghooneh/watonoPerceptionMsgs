@@ -4,6 +4,8 @@ project(decode_radars)
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++17 -O3 ) 
 
+find_package(my_publisher_subscriber REQUIRED)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
