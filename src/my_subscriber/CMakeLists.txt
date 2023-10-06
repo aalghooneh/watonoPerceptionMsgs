@@ -10,7 +10,9 @@ project(my_subscriber)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  decode_radars 
 )
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -45,10 +47,14 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
+
+#I added this
+
+
 ## Generate messages in the 'msg' folder
-# add_message_files(
+#add_message_files(
 #   FILES
-#   Message1.msg
+#    tracklist.msg
 #   Message2.msg
 # )
 
@@ -68,9 +74,9 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
-#   DEPENDENCIES
+##   DEPENDENCIES
 #   std_msgs
-# )
+#   )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -203,5 +209,5 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(my_subscriber_node src/my_subscriber.cpp)
-target_link_libraries(my_subscriber_node ${catkin_LIBRARIES})
+add_executable(my_subscriber_node_ src/my_subscriber.cpp)
+target_link_libraries(my_subscriber_node_ ${catkin_LIBRARIES})
